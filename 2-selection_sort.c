@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "sort.h"
 
-void swap(int *array, size_t ele_i, size_t ele_j)
+void swap(int *array, size_t ele_i, size_t ele_j);
 
 /**
  * selection_sort - sorts an array of elements using selection
