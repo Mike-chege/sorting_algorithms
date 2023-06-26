@@ -3,7 +3,7 @@
 
 void sort_array(int *array, size_t size, size_t left, size_t right);
 size_t pivot(int *array, size_t first, size_t last);
-size_t partition(int *array, size_t size, size_t first, size_t last, int pivot);
+size_t partition(int *array, size_t size, size_t first, size_t last, int pvot);
 void swap_array(int *array, size_t ele_i, size_t ele_j);
 
 /**
@@ -29,7 +29,7 @@ void quick_sort(int *array, size_t size)
 void sort_array(int *array, size_t size, size_t left, size_t right)
 {
 	size_t start = 0;
-	int pvt = array[pivot(array, left, right)];
+	int pvt = array[pvot(array, left, right)];
 
 	if ((long int) right - (long int)left <= 0)
 		return;
@@ -44,10 +44,10 @@ void sort_array(int *array, size_t size, size_t left, size_t right)
  * @size: The size of the array to sort
  * @first: The first element of the array
  * @last: The last element of the array
- * @pivot: The point / value selected
+ * @pvot: The point / value selected
  * Return: The starting point of the subarray
  */
-size_t partition(int *array, size_t size, size_t first, size_t last, int pivot)
+size_t partition(int *array, size_t size, size_t first, size_t last, int pvot)
 {
 	size_t end;
 
@@ -56,7 +56,7 @@ size_t partition(int *array, size_t size, size_t first, size_t last, int pivot)
 
 	for (last = first + 1; last < end; last++)
 	{
-		if (array[last] < pivot)
+		if (array[last] < pvot)
 		{
 			first++;
 			if (first != last)
