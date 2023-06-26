@@ -29,7 +29,7 @@ void quick_sort(int *array, size_t size)
 void sort_array(int *array, size_t size, size_t left, size_t right)
 {
 	size_t start = 0;
-	int pvt = array[pvot(array, left, right)];
+	int pvt = array[pivot(array, left, right)];
 
 	if ((long int) right - (long int)left <= 0)
 		return;
