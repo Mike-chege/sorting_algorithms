@@ -1,7 +1,19 @@
 #include <stdio.h>
 #include "sort.h"
 
-void swap_array(int *ele_i, int *ele_j);
+/**
+ * swap_array - swaps two adjacent elements in the array
+ * @ele_i: The first element to swap with ele_j
+ * @ele_j: The second element to swap with ele_i
+ */
+void swap_array(int *ele_i, int *ele_j)
+{
+        int temp;
+
+        temp = *ele_i;
+        *ele_i = *ele_j;
+        *ele_j = temp;
+}
 
 /**
  * shell_sort - sorts an array of elements
@@ -31,18 +43,4 @@ void shell_sort(int *array, size_t size)
 		}
 		print_array(array, size);
 	}
-}
-
-/**
- * swap_array - swaps two adjacent elements in the array
- * @ele_i: The first element to swap with ele_j
- * @ele_j: The second element to swap with ele_i
- */
-void swap_array(int *ele_i, int *ele_j)
-{
-	int temp;
-
-	temp = *ele_i;
-	*ele_i = *ele_j;
-	*ele_j = temp;
 }
