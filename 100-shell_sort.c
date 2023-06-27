@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "shell.h"
+#include "sort.h"
 
 /**
  * swap_array - swaps the two elements in the array
