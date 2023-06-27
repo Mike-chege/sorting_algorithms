@@ -2,8 +2,14 @@
 #define __SORT__H__
 
 #include <stdlib.h>
+
+/* Boolean values */
 #define FALSE 0
 #define TRUE 1
+
+/* Macros values */
+#define UP 0
+#define DOWN 1
 
 /**
  * struct listint_s - Doubly linked list node
@@ -31,5 +37,5 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
-
+void shell_sort(int *array, size_t size);
 #endif /* __SORT__H__*/
