@@ -1,18 +1,18 @@
 #include <stdio.h>
-#include "sort.h"
+#include "shell.h"
 
 /**
  * swap_array - swaps the two elements in the array
  * @ele_i: The first element to swap
  * @ele_j: The second element to swap
  */
-void swap_array(int *ele_i, int *ele_j)
+void swap_ints(int *a, int *b)
 {
-	int temp;
+	int tmp;
 
-	temp = *ele_i;
-	*ele_i = *ele_j;
-	*ele_j = temp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 /**
@@ -23,25 +23,23 @@ void swap_array(int *ele_i, int *ele_j)
  */
 void shell_sort(int *array, size_t size)
 {
-	size_t start, i, j;
+	size_t gap, i, j;
 
-	if (array == NULL)
-		return;
-	if (size < 2)
+	if (array == NULL || size < 2)
 		return;
 
-	for (start = 1; start < (size / 3);)
-		start = start * 3 + 1;
+	for (gap = 1; gap < (size / 3);)
+		gap = gap * 3 + 1;
 
-	for (; start >= 1; start /= 3)
+	for (; gap >= 1; gap /= 3)
 	{
-		for (i = start; i < size; i++)
+		for (i = gap; i < size; i++)
 		{
 			j = i;
-			while (j >= start && array[j - start] > array[j])
+			while (j >= gap && array[j - gap] > array[j])
 			{
-				swap_array(array + j, array + (j - start));
-				j -= start;
+				swap_ints(array + j, array + (j - gap));
+				j -= gap;
 			}
 		}
 		print_array(array, size);
