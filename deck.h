@@ -8,6 +8,13 @@
 
 typedef unsigned char BOOL;
 
+/**
+ * enum kind_e - sorts the cards to the required order
+ * @SPADE: Card type spade
+ * @HEART: Card type heart
+ * @CLUB: Card type club
+ * @DIAMOND: Card type diamond
+ */
 typedef enum kind_e
 {
 	SPADE = 0,
