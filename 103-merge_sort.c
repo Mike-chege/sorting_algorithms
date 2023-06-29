@@ -3,6 +3,7 @@
 
 void merge(int *arr, int *buf, size_t first, size_t q, size_t r);
 void r_merge(int *arr, int *buf, size_t first, size_t r);
+void merge_sort(int *array, size_t size);
 
 /**
  * merge - sorts the subarray's integers
