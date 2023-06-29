@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "sort.h"
 
+void merge(int *arr, int *buf, size_t first, size_t q, size_t r);
+void r_merge(int *arr, int *buf, size_t first, size_t r);
+
 /**
  * merge - sorts the subarray's integers
  * @arr: The subarray of the array of integers to sort
